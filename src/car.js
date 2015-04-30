@@ -1,5 +1,5 @@
 function Car(make, model, year, color){
-  
+  this.year = new Date().getFullYear();
 }
 
 Car.prototype.sale = function(newOwner){
