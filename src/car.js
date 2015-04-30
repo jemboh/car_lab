@@ -29,4 +29,9 @@ Car.prototype.pickUp = function(passenger) {
   };
 };
 
+Car.prototype.dropOff = function(passenger) {
+  var passengerIndex = this.passengers.indexOf(passenger);
+  this.passengers.splice(passengerIndex, 1);
+};
+
 module.exports=Car;
