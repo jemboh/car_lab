@@ -95,7 +95,7 @@ describe('Car', function(){
       expect(myCar.passengers).to.be.empty;
     });
 
-    xit('should leave passenger in the passengers array if car is off', function(){
+    it('should leave passenger in the passengers array if car is off', function(){
       myCar.start();
       myCar.pickUp("john");
       myCar.off();

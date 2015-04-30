@@ -24,14 +24,16 @@ Car.prototype.off = function() {
 };
 
 Car.prototype.pickUp = function(passenger) {
-  if (this.state === 'on') {
+  if(this.state === 'on') {
     this.passengers.push(passenger);  
   };
 };
 
 Car.prototype.dropOff = function(passenger) {
-  var passengerIndex = this.passengers.indexOf(passenger);
-  this.passengers.splice(passengerIndex, 1);
+  if(this.state === 'on') {
+    var passengerIndex = this.passengers.indexOf(passenger);
+    this.passengers.splice(passengerIndex, 1);
+  };
 };
 
-module.exports=Car;
+module.exports = Car;
